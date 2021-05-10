@@ -139,3 +139,14 @@ MEDIA_URL= '/media/'
 
 # Activate Django-Heroku.
 django_heroku.settings(locals())
+
+
+
+LOGGING = { 
+    "version":1 ,
+    "disable_existing_loggers": False,
+    "handlers":{"console":{"class": "logging.StreamHandler"}},
+    "loggers":{
+        "":{"handlers": ["console"],"level":"INFO"},
+    },
+}
